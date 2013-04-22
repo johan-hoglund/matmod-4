@@ -1,0 +1,96 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2570,         86]
+NotebookOptionsPosition[      2326,         73]
+NotebookOutlinePosition[      2671,         88]
+CellTagsIndexPosition[      2628,         85]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", "[", 
+    RowBox[{
+     RowBox[{"Is", " ", "sick"}], ",", " ", 
+     RowBox[{"Diagnosed", " ", "sick"}]}], "]"}], "=", 
+   RowBox[{"0.003", "*", "0.99"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", "[", 
+    RowBox[{
+     RowBox[{"Is", " ", "sick"}], ",", " ", 
+     RowBox[{"Diagnosed", " ", "healthy"}]}], "]"}], "=", 
+   RowBox[{"0.003", "*", "0.01"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", "[", 
+    RowBox[{
+     RowBox[{"Is", " ", "healthy"}], ",", " ", 
+     RowBox[{"Diagnosed", " ", "healthy"}]}], "]"}], "=", 
+   RowBox[{"0.997", "*", "0.97"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"p", "[", 
+     RowBox[{
+      RowBox[{"Is", " ", "healthy"}], ",", " ", 
+      RowBox[{"Diagnosed", " ", "sick"}]}], "]"}], "=", 
+    RowBox[{"0.997", "*", "0.03"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"If", " ", "someone", "  ", "is", " ", "diagnosed", " ", "sick"}], 
+   ",", " ", 
+   RowBox[{
+   "the", " ", "probability", " ", "of", " ", "being", " ", "sick", " ", "is",
+     " ", 
+    RowBox[{"thus", ":", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"P", "[", 
+       RowBox[{
+        RowBox[{"Is", " ", "sick"}], ",", " ", 
+        RowBox[{"Diagnosed", " ", "sick"}]}], "]"}], "/", 
+      RowBox[{"P", "[", 
+       RowBox[{"*", 
+        RowBox[{",", " ", 
+         RowBox[{"Diagnosed", " ", "sick"}]}]}], "]"}]}]}]}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.5756291396427584`*^9, 3.5756292660945873`*^9}, {
+  3.575629328834803*^9, 3.575629382481944*^9}}]
+},
+WindowSize->{716, 537},
+WindowMargins->{{135, Automatic}, {Automatic, 58}},
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1765, 51, 232, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
