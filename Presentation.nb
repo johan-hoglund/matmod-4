@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     18191,        529]
-NotebookOptionsPosition[     14634,        416]
-NotebookOutlinePosition[     16013,        459]
-CellTagsIndexPosition[     15935,        454]
+NotebookDataLength[     22566,        621]
+NotebookOptionsPosition[     18770,        500]
+NotebookOutlinePosition[     20147,        543]
+CellTagsIndexPosition[     20069,        538]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -285,9 +285,96 @@ Cell["", "SlideShowNavigationBar",
 Cell[BoxData["\[IndentingNewLine]"], "Input",
  CellChangeTimes->{3.57564917227324*^9}],
 
+Cell[CellGroupData[{
+
 Cell["3. Analyzing a Markov chain", "Section",
  CellChangeTimes->{{3.5756491830687633`*^9, 3.5756491833091087`*^9}, {
-  3.5756492294254208`*^9, 3.575649234062088*^9}}]
+  3.5756492294254208`*^9, 3.575649234062088*^9}, {3.57566317256504*^9, 
+  3.5756631932347617`*^9}}],
+
+Cell["\<\
+We fed the program with a rather long (~15kb) text in english about the \
+challenges of ensuring fresh water to a growing world population. For \
+gradually increasing values of k, we got text that was more and more \
+readable, see snippets in table below.\
+\>", "Text",
+ CellChangeTimes->{{3.575663196649672*^9, 3.57566320010464*^9}, {
+  3.5756632390406275`*^9, 3.5756633786714067`*^9}}],
+
+Cell[TextData[Cell[BoxData[GridBox[{
+   {
+    RowBox[{"k", "=", "0"}], "\"\<iti ipd dlearntsste ir oeedffih\>\""},
+   {
+    RowBox[{"k", "=", "1"}], "\"\<oupre torepand tit r bes analan\>\""},
+   {
+    RowBox[{"k", "=", "2"}], "\"\<Liquid of agen is nough scall ties\>\""},
+   {
+    RowBox[{"k", "=", "3"}], "\"\<thereby some farmers descussity\>\""},
+   {
+    RowBox[{"k", "=", "4"}], "\"\<as the rain due come more is the\>\""},
+   {
+    RowBox[{"k", "=", "5"}], "\"\<sent desaline aquifires of Mexico\>\""}
+  },
+  GridBoxDividers->{
+   "Columns" -> {True, {False}, True}, "ColumnsIndexed" -> {}, 
+    "Rows" -> {True, {False}, True}, "RowsIndexed" -> {}}]]]], "Text",
+ CellChangeTimes->{{3.575663418448603*^9, 3.5756636592348366`*^9}}],
+
+Cell["\<\
+One of us once wrote a chat robot which used a large amount of newspaper \
+articles to create readable sentences of gibberish. Put in a public chat \
+room, it used the words written by others as a starting point and searched \
+for words that where likely to follow.
+The value of k controls how many characters of the recent output sequence \
+that should be used to figure out the next character. With k=0 we would \
+expect a random output sequence, since no charatcers is used. By setting k=1 \
+we get a set of pronouncable words, this because a wovel is usually followed \
+by a consonant and vice versa in ordinary english, likewise the output has \
+similar properties. Gradually the sequences becomes better and better when \
+more data is used for character prediction.\
+\>", "Text",
+ CellChangeTimes->{{3.575663732971427*^9, 3.5756638423487043`*^9}, {
+  3.5756638758468723`*^9, 3.575663876227419*^9}, {3.5756640225478177`*^9, 
+  3.5756640235292287`*^9}, {3.575664127729061*^9, 3.575664430824891*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+How can the algorithm escape a throng of dogs?\
+\>", "Subsubsubsubsection",
+ CellChangeTimes->{{3.5756644560211215`*^9, 3.575664473936883*^9}, {
+  3.5756649041967793`*^9, 3.5756649253772354`*^9}}],
+
+Cell["\<\
+Given that only the last k characters in the output string is used for \
+prediction, we figured that it should be possible to trap the algorithm in a \
+repeating sequence. If we set k=4 and add a large amount of repeating \
+three-letter words separated by a space, for example \
+\[OpenCurlyDoubleQuote]dog dog dog...\[CloseCurlyDoubleQuote] to the \
+document, once the algortihm stumbles upon the word \
+\[OpenCurlyDoubleQuote]dog \[OpenCurlyDoubleQuote], it should instantly get \
+trapped. The most likely character to follow \[OpenCurlyDoubleQuote] dog\
+\[CloseCurlyDoubleQuote] would be \[OpenCurlyDoubleQuote] \
+\[OpenCurlyDoubleQuote], to follow \[OpenCurlyDoubleQuote]dog \
+\[OpenCurlyDoubleQuote] would be \[OpenCurlyDoubleQuote]d\
+\[CloseCurlyDoubleQuote], to follow \[OpenCurlyDoubleQuote]og d\
+\[CloseCurlyDoubleQuote] would be o and so on. The trick seems to work, after \
+a rant of gibberish, the algorithm is trapped:
+\[OpenCurlyDoubleQuote]...which water timest is nearth-eashink of thesensive \
+at than dog dog dog dog dog...\[CloseCurlyDoubleQuote].
+However, after a while, it escapes: \[OpenCurlyDoubleQuote]...dog dog dog dog \
+dog dog desire the not set one commodity...\[CloseCurlyDoubleQuote].
+
+How can this happen? Is the compactly written C program doing something \
+fishy, not covered in the assignment description?\
+\>", "Text",
+ CellChangeTimes->{{3.575664492133048*^9, 3.5756644952875843`*^9}, {
+  3.5756645459704623`*^9, 3.5756645844858446`*^9}, {3.5756646488083363`*^9, 
+  3.5756646496996174`*^9}, {3.5756647254585533`*^9, 3.5756648676842766`*^9}, {
+  3.5756649960588703`*^9, 3.5756650336729565`*^9}, {3.575665068653256*^9, 
+  3.575665101580603*^9}, {3.5756651598343678`*^9, 3.5756652880587454`*^9}}]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -364,9 +451,6 @@ Cell[CellGroupData[{
 Cell["", "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 
-Cell[BoxData["\[IndentingNewLine]"], "Input",
- CellChangeTimes->{3.575649264455792*^9}],
-
 Cell["5. Bayesian networks", "Section",
  CellChangeTimes->{{3.5756492699536977`*^9, 3.575649291825147*^9}}]
 }, Open  ]],
@@ -416,8 +500,8 @@ Cell["\<\
 },
 ScreenStyleEnvironment->"Working",
 ShowPageBreaks->False,
-WindowSize->{777, 1087},
-WindowMargins->{{294, Automatic}, {Automatic, -10}},
+WindowSize->{768, 918},
+WindowMargins->{{273, Automatic}, {Automatic, 41}},
 PrintingCopies->1,
 PrintingPageRange->{32000, 32000},
 PrintingOptions->{"Magnification"->1.,
@@ -441,19 +525,19 @@ CellTagsIndex->{
    CellTags->"SlideShowHeader"],
   Cell[10380, 281, 64, 1, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[10740, 294, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[14966, 381, 64, 1, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[13176, 363, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[17402, 450, 64, 1, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[13477, 375, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[17613, 459, 64, 1, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[14426, 407, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[18562, 491, 64, 1, 74, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 15201, 434}
+ {"SlideShowHeader", 19335, 518}
  }
 *)
 (*NotebookFileOutline
@@ -499,37 +583,45 @@ Cell[CellGroupData[{
 Cell[10380, 281, 64, 1, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[10447, 284, 86, 1, 52, "Input"],
-Cell[10536, 287, 167, 2, 79, "Section"]
-}, Open  ]],
 Cell[CellGroupData[{
-Cell[10740, 294, 64, 1, 74, "SlideShowNavigationBar",
- CellTags->"SlideShowHeader"],
+Cell[10558, 289, 217, 3, 79, "Section"],
+Cell[10778, 294, 397, 7, 68, "Text"],
+Cell[11178, 303, 738, 17, 127, "Text"],
+Cell[11919, 322, 1013, 15, 163, "Text"],
 Cell[CellGroupData[{
-Cell[10829, 299, 107, 1, 79, "Section"],
-Cell[10939, 302, 415, 7, 49, "Text"],
-Cell[11357, 311, 781, 20, 109, "Text"],
-Cell[12141, 333, 986, 24, 75, "Text"]
+Cell[12957, 341, 206, 4, 28, "Subsubsubsubsection"],
+Cell[13166, 347, 1739, 27, 220, "Text"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13176, 363, 64, 1, 74, "SlideShowNavigationBar",
- CellTags->"SlideShowHeader"],
-Cell[13243, 366, 87, 1, 52, "Input"],
-Cell[13333, 369, 107, 1, 79, "Section"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[13477, 375, 64, 1, 74, "SlideShowNavigationBar",
+Cell[14966, 381, 64, 1, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[13566, 380, 114, 1, 79, "Section"],
-Cell[13683, 383, 193, 4, 30, "Text"],
-Cell[13879, 389, 498, 12, 76, "Text"]
+Cell[15055, 386, 107, 1, 79, "Section"],
+Cell[15165, 389, 415, 7, 49, "Text"],
+Cell[15583, 398, 781, 20, 109, "Text"],
+Cell[16367, 420, 986, 24, 75, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14426, 407, 64, 1, 74, "SlideShowNavigationBar",
+Cell[17402, 450, 64, 1, 74, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[14493, 410, 125, 3, 79, "Section"]
+Cell[17469, 453, 107, 1, 79, "Section"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17613, 459, 64, 1, 74, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[17702, 464, 114, 1, 79, "Section"],
+Cell[17819, 467, 193, 4, 30, "Text"],
+Cell[18015, 473, 498, 12, 76, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18562, 491, 64, 1, 74, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[18629, 494, 125, 3, 79, "Section"]
 }, Open  ]]
 }
 ]
