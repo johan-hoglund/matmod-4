@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     22566,        621]
-NotebookOptionsPosition[     18770,        500]
-NotebookOutlinePosition[     20147,        543]
-CellTagsIndexPosition[     20069,        538]
+NotebookDataLength[     32118,        903]
+NotebookOptionsPosition[     27313,        745]
+NotebookOutlinePosition[     28668,        787]
+CellTagsIndexPosition[     28590,        782]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -188,21 +188,19 @@ the following form:",
  CellChangeTimes->{{3.5756427333096323`*^9, 3.575642761099592*^9}, 
    3.575642793826651*^9, {3.5756429451242065`*^9, 3.575642959845374*^9}, {
    3.5756437863638496`*^9, 3.5756437879361105`*^9}},
- FormatType->"TextForm",
  FontSize->14],
 
 Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{"PaEqn", "[", "n", "]"}], ":=", 
-   RowBox[{"1", "-", 
-    RowBox[{"Sum", "[", 
-     RowBox[{
-      RowBox[{"0.4", "*", 
-       RowBox[{"0.3", "^", "m"}]}], ",", 
-      RowBox[{"{", 
-       RowBox[{"m", ",", "0", ",", 
-        RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}]}], InputForm]], "Input",
+ RowBox[{
+  RowBox[{"PaEqn", "[", "n", "]"}], ":=", 
+  RowBox[{"1", "-", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{"0.4", "*", 
+      RowBox[{"0.3", "^", "m"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"m", ",", "0", ",", 
+       RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.5756429702703648`*^9, 3.575643080358664*^9}, {
   3.575644050323405*^9, 3.5756440514950895`*^9}},
  FontSize->14],
@@ -219,27 +217,55 @@ which may be at both places at any moment.\
    3.5756436721696463`*^9, {3.5756437246250734`*^9, 3.57564375213463*^9}, {
    3.5756440628914766`*^9, 3.575644116648776*^9}, {3.5756443493333597`*^9, 
    3.575644350805477*^9}},
- FormatType->"TextForm",
  FontSize->14,
  FontWeight->"Plain"],
-
-Cell["", "Input",
- CellGroupingRules->"NormalGrouping",
- CellChangeTimes->{{3.575644164247219*^9, 3.575644174011259*^9}, {
-   3.57564424067712*^9, 3.575644244512635*^9}, 3.5756443588370256`*^9, 
-   3.5756445291018543`*^9},
- FormatType->"TextForm",
- FontSize->14,
- FontWeight->"Plain"],
-
-Cell["2b. Long run proportions", "Subsection",
- CellChangeTimes->{{3.5756445557702017`*^9, 3.5756445884171457`*^9}}],
 
 Cell[CellGroupData[{
 
-Cell["\<\
-2c. Expected proportion of cars, given starting values\
-\>", "Subsection",
+Cell["2b. Long run proportions", "Subsection",
+ CellChangeTimes->{{3.5756445557702017`*^9, 3.5756445884171457`*^9}, {
+  3.5759767371269493`*^9, 3.575976740714343*^9}}],
+
+Cell[TextData[{
+ "To find out how many cars are in A and B in the long run we can see that \
+when we use the formula from 2a after a while we always end up with the same \
+procentage of cars cars in A or rather the decrease is not significant after \
+n>14 where the probability of a car rented in A finds itself in A againis ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"42.8571", "%"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Over time every car in B should have been in A once and therefore the \
+cars in B are irrelivant when calculating how many cars will end up in A. \
+Likewise a fomrula similar to the one in 2a adjusted with the probabilities \
+for B gives us the answer that over time",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{"57.1429", "%"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " of cars starting in B will return to B. So in total we get ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"57.1429", "%"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " of all cars in B and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"42.8571", "%"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " of all cars in A."
+}], "Text",
+ CellChangeTimes->{{3.575976818368126*^9, 3.575976834053605*^9}, {
+  3.575976864335832*^9, 3.57597692440798*^9}, {3.575977058786634*^9, 
+  3.5759770989994965`*^9}, {3.57597717009099*^9, 3.575977327527157*^9}, {
+  3.5759776305976067`*^9, 3.5759776403611326`*^9}, {3.5759776971470633`*^9, 
+  3.5759778422850184`*^9}, {3.5759788569187703`*^9, 3.5759788866506286`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2c. Expected proportion of cars, given starting values", "Subsection",
  CellChangeTimes->{{3.57564459268328*^9, 3.575644634573515*^9}}],
 
 Cell["\<\
@@ -339,9 +365,7 @@ more data is used for character prediction.\
 
 Cell[CellGroupData[{
 
-Cell["\<\
-How can the algorithm escape a throng of dogs?\
-\>", "Subsubsubsubsection",
+Cell["How can the algorithm escape a throng of dogs?", "Subsubsubsubsection",
  CellChangeTimes->{{3.5756644560211215`*^9, 3.575664473936883*^9}, {
   3.5756649041967793`*^9, 3.5756649253772354`*^9}}],
 
@@ -435,14 +459,13 @@ the total probability of being diagnosed sick.\n",
       RowBox[{
        RowBox[{"0.297", "%"}], "+", 
        RowBox[{"2.991", "%"}]}]], "\[TildeTilde]", 
-     RowBox[{"9.8", "%"}]}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"]
+     RowBox[{"9", "%"}]}]}], TraditionalForm]]]
 }], "Text",
  CellChangeTimes->{{3.57564783418917*^9, 3.5756479120311007`*^9}, {
   3.5756480142480817`*^9, 3.575648023561474*^9}, {3.5756482855582066`*^9, 
   3.5756483025125856`*^9}, {3.5756483546275234`*^9, 3.575648370440261*^9}, {
   3.575648740792802*^9, 3.5756487444180145`*^9}, {3.5756490227983055`*^9, 
-  3.5756490426268177`*^9}}]
+  3.5756490426268177`*^9}, {3.5759775170666575`*^9, 3.575977540276161*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -451,8 +474,199 @@ Cell[CellGroupData[{
 Cell["", "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 
+Cell[CellGroupData[{
+
 Cell["5. Bayesian networks", "Section",
- CellChangeTimes->{{3.5756492699536977`*^9, 3.575649291825147*^9}}]
+ CellChangeTimes->{{3.5756492699536977`*^9, 3.575649291825147*^9}, {
+   3.57597046898705*^9, 3.5759705141442137`*^9}, {3.5759705583237305`*^9, 
+   3.5759705813581123`*^9}, 3.575970869845824*^9, {3.575976946627803*^9, 
+   3.5759769687605886`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["5a. Trying out the Bayesian network", "Subsection"]], \
+"Subsection",
+ CellChangeTimes->{{3.575976978593157*^9, 3.5759770137216234`*^9}}],
+
+Cell["\<\
+Probabilities change when we make observations. Bronchitis for example \
+changes from (T:0.45,F:0.55) to (T:0.51,F:0.49) when we make the observation \
+that X-Ray is true. So the probability of bronchitis is higher, since when \
+the X-Ray was true then the probability of having Either tub. or lung cancer \
+increases and in turn Lung cancer as well which means that the probability of \
+smoking is heigher which heightens the probability of bronchitis.\
+\>", "Text",
+ CellChangeTimes->{{3.5759706132193966`*^9, 3.5759708761750517`*^9}, {
+   3.575971190473005*^9, 3.57597122622989*^9}, {3.5759780422435894`*^9, 
+   3.5759780672783136`*^9}, 3.575979746912664*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+5b. The joint probability distribution\
+\>", "Subsection",
+ CellChangeTimes->{{3.5759712357852726`*^9, 3.5759712633877125`*^9}, 
+   3.575971297639592*^9, {3.5759718107912445`*^9, 3.575971814664831*^9}, {
+   3.5759770174511156`*^9, 3.5759770204140973`*^9}}],
+
+Cell[TextData[{
+ "The join probability distribution described mathematiclly with each \
+probability variable and what it depends on : p(x1..xn|variables x depends \
+on).\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"p", "(", 
+     RowBox[{
+     "x1", ",", "x2", ",", "x3", ",", "x4", ",", "x5", ",", "x6", ",", "x7", 
+      ",", "x8"}], ")"}], "=", 
+    RowBox[{
+     RowBox[{"p", "(", "x1", ")"}], 
+     RowBox[{"p", "(", "x2", ")"}], "*", 
+     RowBox[{"p", "(", 
+      RowBox[{"x3", "|", "x1"}], ")"}], 
+     RowBox[{"p", "(", 
+      RowBox[{"x4", "|", "x1"}], ")"}], 
+     RowBox[{"p", "(", 
+      RowBox[{"x5", "|", "x2"}], ")"}], "*", 
+     RowBox[{"p", "(", 
+      RowBox[{
+       RowBox[{"x6", "|", "x4"}], ",", "x5"}], ")"}], "*", 
+     RowBox[{"p", "(", 
+      RowBox[{
+       RowBox[{"x7", "|", "x3"}], ",", "x6"}], ")"}], 
+     RowBox[{"p", "(", 
+      RowBox[{"x8", "|", "x6"}], ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.575971736407693*^9, 3.5759717663206778`*^9}, {
+  3.5759731470237384`*^9, 3.575973194324335*^9}, {3.5759734002488937`*^9, 
+  3.5759736485006046`*^9}, {3.575978300103815*^9, 3.5759783176575394`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+5c. Explaining how the calculation in problem 4 can be described using a \
+bayesian network\
+\>", "Subsection",
+ CellChangeTimes->{{3.575973666940922*^9, 3.5759737214903593`*^9}, {
+  3.5759776271311855`*^9, 3.5759770268774147`*^9}}],
+
+Cell[TextData[{
+ "P(x1,x2)=p(x1)*p(x1|x2) where x1 is a sick person and x1\[CloseCurlyQuote] \
+is a healthy person, x2 is diagnosed sick and x2\[CloseCurlyQuote] is \
+diagnosed healthy.\n",
+ Cell[BoxData[GridBox[{
+    {"Posterior", "Renormalize", "Prior", 
+     RowBox[{"Likelihood", " ", "function"}], "Values"},
+    {
+     RowBox[{"p", 
+      RowBox[{"(", 
+       RowBox[{"x1", ",", 
+        RowBox[{
+         RowBox[{"x2", "|", "x2"}], "=", "1"}]}], ")"}]}], 
+     RowBox[{"Prior", "*", "Likelihood"}], 
+     RowBox[{"p", 
+      RowBox[{"(", 
+       RowBox[{"x1", ",", "x2"}], ")"}]}], 
+     RowBox[{"*", "p", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x2", "=", 
+         RowBox[{"1", "|", "x1"}]}], ",", "x2"}], ")"}]}], 
+     RowBox[{"x1", ",", "x2"}]},
+    {"0", "0", "96.709", "0", 
+     RowBox[{"0", ",", "0"}]},
+    {
+     RowBox[{"0.91", "%"}], 
+     RowBox[{"2.991", "%"}], 
+     RowBox[{"2.991", "%"}], "1", 
+     RowBox[{"0", ",", "1"}]},
+    {"0", "0", 
+     RowBox[{"0.003", "%"}], "0", 
+     RowBox[{"1", ",", "0"}]},
+    {
+     RowBox[{"0.09", "%"}], 
+     RowBox[{"0.297", "%"}], 
+     RowBox[{"0.297", "%"}], "1", 
+     RowBox[{"1", ",", "1"}]}
+   },
+   GridBoxDividers->{
+    "Columns" -> {False, {True}, False}, "ColumnsIndexed" -> {}, 
+     "Rows" -> {False, {True}, False}, "RowsIndexed" -> {}}]]]
+}], "Text",
+ CellChangeTimes->{{3.5759776339237213`*^9, 3.575977705740692*^9}, 
+   3.5759782144236507`*^9, {3.5759782612879524`*^9, 3.5759784865884542`*^9}, {
+   3.575978561960803*^9, 3.5759786992655244`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["5d. Updating possibilities", "Subsection",
+ CellChangeTimes->{{3.57597875530408*^9, 3.575978755925496*^9}, {
+  3.575978808256452*^9, 3.5759770352029743`*^9}, {3.575978084770017*^9, 
+  3.5759780858247004`*^9}}],
+
+Cell[TextData[{
+ "To update our probability table we simply enter whichever obervation we \
+make and let the equation calculate the answer for us similarly to how we did \
+it in 5c. For example it would look like this if X-ray=true: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"p", "(", 
+     RowBox[{
+     "x1", ",", "x2", ",", "x3", ",", "x4", ",", "x5", ",", "x6", ",", "x7", 
+      ",", 
+      RowBox[{
+       RowBox[{"x8", "|", "x8"}], "=", "1"}]}], ")"}], "=", 
+    RowBox[{
+     RowBox[{"p", "(", "x1", ")"}], 
+     RowBox[{"p", "(", "x2", ")"}], "*", 
+     RowBox[{"p", "(", 
+      RowBox[{"x3", "|", "x1"}], ")"}], 
+     RowBox[{"p", "(", 
+      RowBox[{"x4", "|", "x1"}], ")"}], 
+     RowBox[{"p", "(", 
+      RowBox[{"x5", "|", "x2"}], ")"}], "*", 
+     RowBox[{"p", "(", 
+      RowBox[{
+       RowBox[{"x6", "|", "x4"}], ",", "x5"}], ")"}], "*", 
+     RowBox[{"p", "(", 
+      RowBox[{
+       RowBox[{"x7", "|", "x3"}], ",", "x6"}], ")"}], 
+     RowBox[{"p", "(", 
+      RowBox[{"x8", "|", "x6"}], ")"}], " ", "*", 
+     RowBox[{"p", "(", 
+      RowBox[{
+       RowBox[{"x8", "=", 
+        RowBox[{"1", "|", "x1"}]}], ",", "x2", ",", "x3", ",", "x4", ",", 
+       "x5", ",", "x6", ",", "x7", ",", "x8"}], ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " "
+}], "Text",
+ CellChangeTimes->{{3.5759783323163347`*^9, 3.575978435708399*^9}, {
+  3.575978483858562*^9, 3.575978490077716*^9}, {3.575978562709234*^9, 
+  3.575978660612635*^9}}],
+
+Cell["\<\
+After which we would devide each probability with (x1+x2+x3+x4+x5+x6+x7) in \
+order to renormalize it.\
+\>", "Text",
+ CellChangeTimes->{{3.5759737271131163`*^9, 3.5759737301171236`*^9}, {
+  3.575978722678094*^9, 3.575978754840579*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["5e. The Hugin system", "Subsection",
+ CellChangeTimes->{{3.57597879652343*^9, 3.5759788126461935`*^9}}],
+
+Cell["", "Text"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -492,23 +706,53 @@ Cell[CellGroupData[{
 Cell["", "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 
+Cell[CellGroupData[{
+
+Cell["7. Reflection on previous module", "Section",
+ CellChangeTimes->{{3.575649353083232*^9, 3.575649364439562*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["7a. Attendance", "Subsection",
+ CellChangeTimes->{{3.5759790682292986`*^9, 3.5759790948120575`*^9}}],
+
 Cell["\<\
-7. Reflection on previous module\
-\>", "Section",
- CellChangeTimes->{{3.575649353083232*^9, 3.575649364439562*^9}}]
+We were both at the follow-up lecture and it looked like we had the right \
+idea about all of the problems.\
+\>", "Text",
+ CellChangeTimes->{{3.575979111737363*^9, 3.5759792014452877`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+7b. Discussions with other groups\
+\>", "Subsection",
+ CellChangeTimes->{{3.5759792162581825`*^9, 3.575979230810906*^9}}],
+
+Cell["", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["7c. Reflection over module 3", "Subsection",
+ CellChangeTimes->{{3.575979241608116*^9, 3.5759792585034027`*^9}}],
+
+Cell["", "Text"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 ScreenStyleEnvironment->"Working",
-ShowPageBreaks->False,
-WindowSize->{768, 918},
-WindowMargins->{{273, Automatic}, {Automatic, 41}},
+WindowSize->{768, 729},
+WindowMargins->{{Automatic, 164}, {Automatic, -42}},
 PrintingCopies->1,
 PrintingPageRange->{32000, 32000},
 PrintingOptions->{"Magnification"->1.,
 "PaperOrientation"->"Portrait",
 "PaperSize"->{595.3199999999999, 841.92}},
 TaggingRules->{"SlideShow" -> True},
-FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (January 25, 2013)",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -517,111 +761,149 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "SlideShowHeader"->{
-  Cell[579, 22, 4250, 94, 75, "SlideShowNavigationBar",
+  Cell[579, 22, 4250, 94, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[5057, 130, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[5057, 130, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[5400, 143, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[5400, 143, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[10380, 281, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[11635, 307, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[14966, 381, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[16213, 405, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[17402, 450, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[18662, 473, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[17613, 459, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[25424, 673, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[18562, 491, 64, 1, 74, "SlideShowNavigationBar",
+  Cell[26373, 705, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 19335, 518}
+ {"SlideShowHeader", 27856, 762}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 4250, 94, 75, "SlideShowNavigationBar",
+Cell[579, 22, 4250, 94, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[4832, 118, 146, 5, 144, "Title"],
 Cell[4981, 125, 39, 0, 49, "Subtitle"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5057, 130, 64, 1, 74, "SlideShowNavigationBar",
+Cell[5057, 130, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[5124, 133, 239, 5, 79, "Section"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5400, 143, 64, 1, 74, "SlideShowNavigationBar",
+Cell[5400, 143, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
 Cell[5489, 148, 200, 3, 79, "Section"],
 Cell[5692, 153, 494, 8, 68, "Text"],
 Cell[6189, 163, 769, 18, 52, "Input"],
-Cell[6961, 183, 404, 8, 30, "Text",
+Cell[6961, 183, 379, 7, 30, "Text",
  CellGroupingRules->"NormalGrouping"],
-Cell[7368, 193, 475, 14, 31, "Input"],
-Cell[7846, 209, 716, 14, 87, "Text",
+Cell[7343, 192, 443, 13, 31, "Input"],
+Cell[7789, 207, 691, 13, 87, "Text",
  CellGroupingRules->"NormalGrouping"],
-Cell[8565, 225, 284, 7, 31, "Input",
- CellGroupingRules->"NormalGrouping"],
-Cell[8852, 234, 116, 1, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[8993, 239, 149, 3, 35, "Subsection"],
-Cell[9145, 244, 310, 5, 68, "Text"],
+Cell[8505, 224, 167, 2, 43, "Subsection"],
+Cell[8675, 228, 1544, 34, 144, "Text"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[9480, 253, 262, 5, 45, "Item"],
-Cell[9745, 260, 296, 5, 45, "Item"],
-Cell[10044, 267, 263, 6, 45, "Item"]
+Cell[10256, 267, 141, 1, 43, "Subsection"],
+Cell[10400, 270, 310, 5, 68, "Text"],
+Cell[CellGroupData[{
+Cell[10735, 279, 262, 5, 45, "Item"],
+Cell[11000, 286, 296, 5, 45, "Item"],
+Cell[11299, 293, 263, 6, 45, "Item"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10380, 281, 64, 1, 74, "SlideShowNavigationBar",
+Cell[11635, 307, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[10447, 284, 86, 1, 52, "Input"],
+Cell[11702, 310, 86, 1, 52, "Input"],
 Cell[CellGroupData[{
-Cell[10558, 289, 217, 3, 79, "Section"],
-Cell[10778, 294, 397, 7, 68, "Text"],
-Cell[11178, 303, 738, 17, 127, "Text"],
-Cell[11919, 322, 1013, 15, 163, "Text"],
+Cell[11813, 315, 217, 3, 79, "Section"],
+Cell[12033, 320, 397, 7, 68, "Text"],
+Cell[12433, 329, 738, 17, 127, "Text"],
+Cell[13174, 348, 1013, 15, 163, "Text"],
 Cell[CellGroupData[{
-Cell[12957, 341, 206, 4, 28, "Subsubsubsubsection"],
-Cell[13166, 347, 1739, 27, 220, "Text"]
+Cell[14212, 367, 198, 2, 28, "Subsubsubsubsection"],
+Cell[14413, 371, 1739, 27, 220, "Text"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14966, 381, 64, 1, 74, "SlideShowNavigationBar",
+Cell[16213, 405, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[15055, 386, 107, 1, 79, "Section"],
-Cell[15165, 389, 415, 7, 49, "Text"],
-Cell[15583, 398, 781, 20, 109, "Text"],
-Cell[16367, 420, 986, 24, 75, "Text"]
+Cell[16302, 410, 107, 1, 79, "Section"],
+Cell[16412, 413, 415, 7, 49, "Text"],
+Cell[16830, 422, 781, 20, 109, "Text"],
+Cell[17614, 444, 999, 23, 75, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17402, 450, 64, 1, 74, "SlideShowNavigationBar",
+Cell[18662, 473, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[17469, 453, 107, 1, 79, "Section"]
+Cell[CellGroupData[{
+Cell[18751, 478, 286, 4, 79, "Section"],
+Cell[CellGroupData[{
+Cell[19062, 486, 161, 2, 43, "Subsection"],
+Cell[19226, 490, 672, 10, 106, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17613, 459, 64, 1, 74, "SlideShowNavigationBar",
- CellTags->"SlideShowHeader"],
+Cell[19935, 505, 266, 5, 43, "Subsection"],
+Cell[20204, 512, 1195, 32, 86, "Text"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[17702, 464, 114, 1, 79, "Section"],
-Cell[17819, 467, 193, 4, 30, "Text"],
-Cell[18015, 473, 498, 12, 76, "Text"]
+Cell[21436, 549, 242, 5, 67, "Subsection"],
+Cell[21681, 556, 1542, 45, 164, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23260, 606, 215, 3, 43, "Subsection"],
+Cell[23478, 611, 1472, 40, 89, "Text"],
+Cell[24953, 653, 245, 5, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25235, 663, 109, 1, 43, "Subsection"],
+Cell[25347, 666, 16, 0, 30, "Text"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18562, 491, 64, 1, 74, "SlideShowNavigationBar",
+Cell[25424, 673, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[18629, 494, 125, 3, 79, "Section"]
+Cell[CellGroupData[{
+Cell[25513, 678, 114, 1, 79, "Section"],
+Cell[25630, 681, 193, 4, 30, "Text"],
+Cell[25826, 687, 498, 12, 76, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26373, 705, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[26462, 710, 117, 1, 79, "Section"],
+Cell[CellGroupData[{
+Cell[26604, 715, 106, 1, 43, "Subsection"],
+Cell[26713, 718, 199, 4, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26949, 727, 131, 3, 43, "Subsection"],
+Cell[27083, 732, 16, 0, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27136, 737, 118, 1, 43, "Subsection"],
+Cell[27257, 740, 16, 0, 30, "Text"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
