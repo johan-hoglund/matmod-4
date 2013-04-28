@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     32118,        903]
-NotebookOptionsPosition[     27313,        745]
-NotebookOutlinePosition[     28668,        787]
-CellTagsIndexPosition[     28590,        782]
+NotebookDataLength[     37584,       1007]
+NotebookOptionsPosition[     32581,        842]
+NotebookOutlinePosition[     33936,        884]
+CellTagsIndexPosition[     33858,        879]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -123,7 +123,32 @@ Probability models\
  CellChangeTimes->{
   3.559948400406288*^9, {3.575629795739349*^9, 3.5756298174907775`*^9}}],
 
-Cell["Slide Show Subtitle", "Subtitle"]
+Cell[TextData[{
+ "Johan H\[ODoubleDot]glund, D program, 880910-4857, johan@jhoglund.se\nEirc \
+McNabb, D program, 910723-2275, eric.mcnabb@gmail.com\n\nApril 28, 2013\n\n",
+ StyleBox["We hereby declare that we have both actively participated in \
+solving every\nexercise, and all solutions are entirely our own work.",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.5761658451563253`*^9, 3.5761658997467933`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Approximate time spent", "Subsubsection",
+ CellChangeTimes->{{3.5761658876006775`*^9, 3.5761658949305754`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Johan H\[ODoubleDot]glund ",
+  FontWeight->"Bold"],
+ "X hrs\n",
+ StyleBox["Eric McNabb",
+  FontWeight->"Bold"],
+ " 16 hrs"
+}], "Text",
+ CellChangeTimes->{{3.5761659161537523`*^9, 3.576165952928336*^9}, {
+  3.5761664110925107`*^9, 3.57616644788509*^9}, {3.576170863345342*^9, 
+  3.5761708641138325`*^9}}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -131,12 +156,32 @@ Cell[CellGroupData[{
 Cell["", "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 
-Cell["\<\
-1. Stochastic and deterministic models\
-\>", "Section",
+Cell[CellGroupData[{
+
+Cell["1. Stochastic and deterministic models", "Section",
  CellChangeTimes->{{3.575631134218565*^9, 3.5756311622191353`*^9}, {
   3.5756417638055534`*^9, 3.5756417670602336`*^9}, {3.5756418048345504`*^9, 
-  3.5756418324943233`*^9}}]
+  3.5756418324943233`*^9}}],
+
+Cell["\<\
+In determenistic models we can make very accurate predictions over time as \
+long as the original paramters are still significant. The problem is that \
+sometimes models have wrong assumtions from the start, maybe not immidieatly \
+but over time they can become lacking (population models). Some constants or \
+values might not represent what acually hapens in reality (i.e TV-screen \
+sales from previous module).  We also get very precis answers with \
+deterministic models unlike with stochastic models. In stochastic models we \
+get values that are most likely to be true over time or what the probability \
+of certain things happening.Stochastic models can also give us precise \
+answers yet they will be representing a probability based on previous data \
+rather than factor in changes over a longer amount of time in the future.\
+\>", "Text",
+ CellChangeTimes->{{3.576164546277668*^9, 3.576164571367428*^9}, {
+   3.5761646534912863`*^9, 3.576164684735159*^9}, {3.5761649150850363`*^9, 
+   3.5761652220030546`*^9}, {3.5761652660564833`*^9, 3.576165290659918*^9}, {
+   3.576165337942522*^9, 3.576165506760275*^9}, 3.576165557817382*^9, {
+   3.5761656065149117`*^9, 3.576165671187114*^9}}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -612,7 +657,7 @@ Cell["5d. Updating possibilities", "Subsection",
 Cell[TextData[{
  "To update our probability table we simply enter whichever obervation we \
 make and let the equation calculate the answer for us similarly to how we did \
-it in 5c. For example it would look like this if X-ray=true: ",
+it in 5c. For example it would look like this if X-ray is true;\n ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -649,7 +694,7 @@ it in 5c. For example it would look like this if X-ray=true: ",
 }], "Text",
  CellChangeTimes->{{3.5759783323163347`*^9, 3.575978435708399*^9}, {
   3.575978483858562*^9, 3.575978490077716*^9}, {3.575978562709234*^9, 
-  3.575978660612635*^9}}],
+  3.575978660612635*^9}, {3.576166360517727*^9, 3.5761663709036646`*^9}}],
 
 Cell["\<\
 After which we would devide each probability with (x1+x2+x3+x4+x5+x6+x7) in \
@@ -708,8 +753,11 @@ Cell["", "SlideShowNavigationBar",
 
 Cell[CellGroupData[{
 
-Cell["7. Reflection on previous module", "Section",
- CellChangeTimes->{{3.575649353083232*^9, 3.575649364439562*^9}}],
+Cell["\<\
+7. Reflection on previous module\
+\>", "Section",
+ CellChangeTimes->{{3.575649353083232*^9, 3.575649364439562*^9}, {
+  3.5761605370208707`*^9, 3.5761605402320175`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -730,7 +778,42 @@ Cell["\<\
 \>", "Subsection",
  CellChangeTimes->{{3.5759792162581825`*^9, 3.575979230810906*^9}}],
 
-Cell["", "Text"]
+Cell[TextData[{
+ "It was pointed out hat we had forgotten one of the equilibrium points in \
+the first problem, where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"w", "=", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"k", "=", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".We reached similar conclusion about the equilibrium point, i.e that it was \
+stable in the point itself but any other starting values would never reach \
+the same point. We all doubt the models valididity when whales reach a \
+population of less than 2 and still multiply which is hard considering that \
+you would need 2 whales of diffrent sex to be able to reproduce. Making sure \
+whale populations are represented as integer values seems like a good \
+solution to make sure this doens\[CloseCurlyQuote]t happen.Other faults with \
+the model (i.e Krill fishing/whale hunting etc.) we were all agreed on should \
+be intresting as time goes on,\[LineSeparator]We were not alone in thinking \
+the filter was some sort of telefon filter. Another suggestion was some kind \
+of hearing aid as it amplified the lower frequencies and dampened the higher \
+frequencys to enhance sound in speach in different ways.\nThe drug \
+adminastration we figured out differently than the other groups but we seemed \
+to have reached a very similar to conclusion, similarly to the solution that \
+was ecplained during the lecture. There is some decline of the drug \
+concentration in the blood and it doesn\[CloseCurlyQuote]t tapper of linearly \
+as nothing would as it does in reality and it felt like a body would fight of \
+anything new more fiercely if there was a higher amount of it."
+}], "Text",
+ CellChangeTimes->{{3.576166547208458*^9, 3.576166583892945*^9}, {
+  3.5761666415885005`*^9, 3.576166754144673*^9}, {3.5761667858178315`*^9, 
+  3.5761668726598425`*^9}, {3.5761670775837345`*^9, 3.576167190450134*^9}, {
+  3.576167352343444*^9, 3.5761673670963182`*^9}, {3.5761677340774164`*^9, 
+  3.5761677949960904`*^9}, {3.5761679091853704`*^9, 3.5761680848887405`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -738,7 +821,21 @@ Cell[CellGroupData[{
 Cell["7c. Reflection over module 3", "Subsection",
  CellChangeTimes->{{3.575979241608116*^9, 3.5759792585034027`*^9}}],
 
-Cell["", "Text"]
+Cell["\<\
+We learned a lot about dynamic systems, namely how diffrent variables affect \
+one another and how they depend on each other in the final model. Also how \
+testing different formulas can affect the model greatly, similarly to \
+diffrent kind of regressions of drug consentrations in blood. We also focused \
+a lot on building a model so some of our test paramters were somewhat \
+unrealistic even though the model was good if not as simple as the one \
+suggested in the feedback lecture. We also have learned more about creating \
+models and how to change them for different effects.  \
+\>", "Text",
+ CellChangeTimes->{{3.5761604177762156`*^9, 3.5761604256484814`*^9}, {
+  3.5761604663946943`*^9, 3.5761604947826543`*^9}, {3.5761605329071217`*^9, 
+  3.576160535223669*^9}, {3.5761605703061047`*^9, 3.576160585043949*^9}, {
+  3.5761607475125985`*^9, 3.576160788654084*^9}, {3.576160840623596*^9, 
+  3.576160943071032*^9}, {3.5761614175910273`*^9, 3.576161460331608*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -763,25 +860,25 @@ CellTagsIndex->{
  "SlideShowHeader"->{
   Cell[579, 22, 4250, 94, 76, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[5057, 130, 64, 1, 75, "SlideShowNavigationBar",
+  Cell[5928, 155, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[5400, 143, 64, 1, 75, "SlideShowNavigationBar",
+  Cell[7503, 188, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[11635, 307, 64, 1, 75, "SlideShowNavigationBar",
+  Cell[13738, 352, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[16213, 405, 64, 1, 75, "SlideShowNavigationBar",
+  Cell[18316, 450, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[18662, 473, 64, 1, 75, "SlideShowNavigationBar",
+  Cell[20765, 518, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[25424, 673, 64, 1, 75, "SlideShowNavigationBar",
+  Cell[27580, 718, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"],
-  Cell[26373, 705, 64, 1, 75, "SlideShowNavigationBar",
+  Cell[28529, 750, 64, 1, 75, "SlideShowNavigationBar",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 27856, 762}
+ {"SlideShowHeader", 33124, 859}
  }
 *)
 (*NotebookFileOutline
@@ -790,118 +887,125 @@ Cell[CellGroupData[{
 Cell[579, 22, 4250, 94, 76, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[4832, 118, 146, 5, 144, "Title"],
-Cell[4981, 125, 39, 0, 49, "Subtitle"]
+Cell[4981, 125, 423, 7, 144, "Text"],
+Cell[CellGroupData[{
+Cell[5429, 136, 117, 1, 34, "Subsubsection"],
+Cell[5549, 139, 330, 10, 49, "Text"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5057, 130, 64, 1, 75, "SlideShowNavigationBar",
+Cell[5928, 155, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[5124, 133, 239, 5, 79, "Section"]
+Cell[CellGroupData[{
+Cell[6017, 160, 231, 3, 79, "Section"],
+Cell[6251, 165, 1203, 17, 182, "Text"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5400, 143, 64, 1, 75, "SlideShowNavigationBar",
+Cell[7503, 188, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[5489, 148, 200, 3, 79, "Section"],
-Cell[5692, 153, 494, 8, 68, "Text"],
-Cell[6189, 163, 769, 18, 52, "Input"],
-Cell[6961, 183, 379, 7, 30, "Text",
+Cell[7592, 193, 200, 3, 79, "Section"],
+Cell[7795, 198, 494, 8, 68, "Text"],
+Cell[8292, 208, 769, 18, 52, "Input"],
+Cell[9064, 228, 379, 7, 30, "Text",
  CellGroupingRules->"NormalGrouping"],
-Cell[7343, 192, 443, 13, 31, "Input"],
-Cell[7789, 207, 691, 13, 87, "Text",
+Cell[9446, 237, 443, 13, 31, "Input"],
+Cell[9892, 252, 691, 13, 87, "Text",
  CellGroupingRules->"NormalGrouping"],
 Cell[CellGroupData[{
-Cell[8505, 224, 167, 2, 43, "Subsection"],
-Cell[8675, 228, 1544, 34, 144, "Text"]
+Cell[10608, 269, 167, 2, 43, "Subsection"],
+Cell[10778, 273, 1544, 34, 144, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10256, 267, 141, 1, 43, "Subsection"],
-Cell[10400, 270, 310, 5, 68, "Text"],
+Cell[12359, 312, 141, 1, 43, "Subsection"],
+Cell[12503, 315, 310, 5, 68, "Text"],
 Cell[CellGroupData[{
-Cell[10735, 279, 262, 5, 45, "Item"],
-Cell[11000, 286, 296, 5, 45, "Item"],
-Cell[11299, 293, 263, 6, 45, "Item"]
+Cell[12838, 324, 262, 5, 45, "Item"],
+Cell[13103, 331, 296, 5, 45, "Item"],
+Cell[13402, 338, 263, 6, 45, "Item"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11635, 307, 64, 1, 75, "SlideShowNavigationBar",
+Cell[13738, 352, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
-Cell[11702, 310, 86, 1, 52, "Input"],
+Cell[13805, 355, 86, 1, 52, "Input"],
 Cell[CellGroupData[{
-Cell[11813, 315, 217, 3, 79, "Section"],
-Cell[12033, 320, 397, 7, 68, "Text"],
-Cell[12433, 329, 738, 17, 127, "Text"],
-Cell[13174, 348, 1013, 15, 163, "Text"],
+Cell[13916, 360, 217, 3, 79, "Section"],
+Cell[14136, 365, 397, 7, 68, "Text"],
+Cell[14536, 374, 738, 17, 127, "Text"],
+Cell[15277, 393, 1013, 15, 163, "Text"],
 Cell[CellGroupData[{
-Cell[14212, 367, 198, 2, 28, "Subsubsubsubsection"],
-Cell[14413, 371, 1739, 27, 220, "Text"]
+Cell[16315, 412, 198, 2, 28, "Subsubsubsubsection"],
+Cell[16516, 416, 1739, 27, 220, "Text"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16213, 405, 64, 1, 75, "SlideShowNavigationBar",
- CellTags->"SlideShowHeader"],
-Cell[CellGroupData[{
-Cell[16302, 410, 107, 1, 79, "Section"],
-Cell[16412, 413, 415, 7, 49, "Text"],
-Cell[16830, 422, 781, 20, 109, "Text"],
-Cell[17614, 444, 999, 23, 75, "Text"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[18662, 473, 64, 1, 75, "SlideShowNavigationBar",
+Cell[18316, 450, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[18751, 478, 286, 4, 79, "Section"],
-Cell[CellGroupData[{
-Cell[19062, 486, 161, 2, 43, "Subsection"],
-Cell[19226, 490, 672, 10, 106, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[19935, 505, 266, 5, 43, "Subsection"],
-Cell[20204, 512, 1195, 32, 86, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[21436, 549, 242, 5, 67, "Subsection"],
-Cell[21681, 556, 1542, 45, 164, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[23260, 606, 215, 3, 43, "Subsection"],
-Cell[23478, 611, 1472, 40, 89, "Text"],
-Cell[24953, 653, 245, 5, 30, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[25235, 663, 109, 1, 43, "Subsection"],
-Cell[25347, 666, 16, 0, 30, "Text"]
-}, Open  ]]
+Cell[18405, 455, 107, 1, 79, "Section"],
+Cell[18515, 458, 415, 7, 49, "Text"],
+Cell[18933, 467, 781, 20, 109, "Text"],
+Cell[19717, 489, 999, 23, 75, "Text"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25424, 673, 64, 1, 75, "SlideShowNavigationBar",
+Cell[20765, 518, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[25513, 678, 114, 1, 79, "Section"],
-Cell[25630, 681, 193, 4, 30, "Text"],
-Cell[25826, 687, 498, 12, 76, "Text"]
+Cell[20854, 523, 286, 4, 79, "Section"],
+Cell[CellGroupData[{
+Cell[21165, 531, 161, 2, 43, "Subsection"],
+Cell[21329, 535, 672, 10, 106, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22038, 550, 266, 5, 43, "Subsection"],
+Cell[22307, 557, 1195, 32, 86, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23539, 594, 242, 5, 67, "Subsection"],
+Cell[23784, 601, 1542, 45, 164, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25363, 651, 215, 3, 43, "Subsection"],
+Cell[25581, 656, 1525, 40, 108, "Text"],
+Cell[27109, 698, 245, 5, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27391, 708, 109, 1, 43, "Subsection"],
+Cell[27503, 711, 16, 0, 30, "Text"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26373, 705, 64, 1, 75, "SlideShowNavigationBar",
+Cell[27580, 718, 64, 1, 75, "SlideShowNavigationBar",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[26462, 710, 117, 1, 79, "Section"],
-Cell[CellGroupData[{
-Cell[26604, 715, 106, 1, 43, "Subsection"],
-Cell[26713, 718, 199, 4, 49, "Text"]
+Cell[27669, 723, 114, 1, 79, "Section"],
+Cell[27786, 726, 193, 4, 30, "Text"],
+Cell[27982, 732, 498, 12, 76, "Text"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26949, 727, 131, 3, 43, "Subsection"],
-Cell[27083, 732, 16, 0, 30, "Text"]
+Cell[28529, 750, 64, 1, 75, "SlideShowNavigationBar",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[28618, 755, 178, 4, 79, "Section"],
+Cell[CellGroupData[{
+Cell[28821, 763, 106, 1, 43, "Subsection"],
+Cell[28930, 766, 199, 4, 49, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27136, 737, 118, 1, 43, "Subsection"],
-Cell[27257, 740, 16, 0, 30, "Text"]
+Cell[29166, 775, 131, 3, 43, "Subsection"],
+Cell[29300, 780, 2104, 35, 315, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31441, 820, 118, 1, 43, "Subsection"],
+Cell[31562, 823, 979, 14, 125, "Text"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
